@@ -1,0 +1,48 @@
+﻿   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+   <style>
+   body{
+      background-color: #121212;
+      color: white;
+   }
+</style>
+   <body>
+      @model validation_model.Models.validation
+      @* @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers *@
+
+      <form action="/result" method="post">
+      <div>
+      <label asp-for="F_name"></label>
+      <input type="text" asp-for="F_name" id="">
+      <span asp-validation-for="F_name" ></span>
+      </div>
+         <div>
+      <label asp-for="L_name"></label>
+      <input type="text" asp-for="L_name" id="">
+      <span asp-validation-for="L_name" ></span>
+      </div>
+               <div>
+      <label asp-for="Age"></label>
+      <input type="text" asp-for="Age" id="">
+      <span asp-validation-for="Age" ></span>
+      </div>
+               <div>
+      <label asp-for="Email"></label>
+      <input type="text" asp-for="Email" id="">
+      <span asp-validation-for="Email" ></span>
+      </div>
+      <div>
+      <label asp-for="Password"></label>
+      <input type="text" asp-for="Password" id="">
+      <span asp-validation-for="Password" ></span>
+      </div>
+      <input type="submit">
+      </form>
+   </body>
+   </html>
